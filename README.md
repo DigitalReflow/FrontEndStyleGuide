@@ -117,7 +117,7 @@
     .icon-search:before {
       content: "/f00";
       display: inline-block;
-      margin-right: 0.5em;
+      margin-right: 0.5rem;
     }
 
     .4-col-grid:nth-child(4n) {
@@ -415,18 +415,18 @@
     ```scss
     // Bad
     .foo-bar {
-      margin: .5em;
-      padding: .5em;
+      margin: .5rem;
+      padding: .5rem;
     }
 
     // Good
     .foo-bar {
-      margin: 0.5em;
-      padding: 0.5em;
+      margin: 0.5rem;
+      padding: 0.5rem;
     }
     ```
 
-  + Prefer em's over px for padding, margin, and font-size
+  + Prefer rem's over px for padding, margin, and font-size
 
     ```scss
     // Assuming a 16px or 100% base font-size in html or body tag
@@ -440,9 +440,16 @@
 
     // Good
     .foo-bar {
-      font-size: 1em;
+      font-size: 1rem;
       margin: 1.5em 0;
-      padding: 1.5em;
+      padding: 1.5rem;
+    }
+
+    // Using Zurb Foundation?
+    .foo-bar {
+      font-size: rem-calc(16);
+      margin: rem-calc(24, 0);
+      padding: rem-calc(24);
     }
     ```
 
@@ -451,13 +458,13 @@
     ```scss
     // Bad
     .foo-bar {
-      font-size: 1em;
-      line-height: 1.5em;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
 
     // Good
     .foo-bar {
-      font-size: 1em;
+      font-size: 1rem;
       line-height: 1.5;
     }
     ```
@@ -467,14 +474,14 @@
     ```scss
     // Bad
     .foo-bar {
-      margin: 1em 0em;
-      padding: 0em 1em;
+      margin: 1em 0rem;
+      padding: 0em 1rem;
     }
 
     // Good
     .foo-bar {
       margin: 1em 0;
-      padding: 0 1em;
+      padding: 0 1rem;
     }
     ```
 
